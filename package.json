@@ -1,0 +1,23 @@
+{
+  "name": "testify",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "nodemon app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "ejs": "^3.1.10",
+    "express": "^4.21.2",
+    "mongoose": "^8.13.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9",
+    "tailwindcss": "^3.4.17"
+  }
+}
