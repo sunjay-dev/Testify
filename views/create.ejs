@@ -28,7 +28,13 @@
             </div>
         </div>
         <div class="mt-4 flex items-center justify-end gap-4">
-            <button type="button" class="px-4 py-2 flex items-center bg-blue-500 text-white rounded"><img src="/createTest/file.svg" class="h-5 w-5 text-center mr-1">Upload from file</button> 
+            <button type="button" class="px-4 py-2 flex items-center bg-blue-500 text-white rounded">
+                <img src="/createTest/eye.svg" class="h-5 w-5 text-center mr-1">Preview
+            </button>
+            <input type="file" id="fileInput" accept=".txt" class="hidden">
+            <button type="button" onclick="document.getElementById('fileInput').click()" class="px-4 py-2 flex items-center bg-blue-500 text-white rounded">
+                <img src="/createTest/file.svg" class="h-5 w-5 text-center mr-1">Upload from file
+            </button> 
             <button type="button" onclick="addMCQ()" class="px-4 py-2 bg-blue-500 text-white rounded">Add MCQ</button>
         </div>
         <h3 class="text-lg font-bold mb-2">MCQs</h3>
