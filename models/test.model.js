@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
 const testSchema = new mongoose.Schema({
     name: {
@@ -7,20 +7,26 @@ const testSchema = new mongoose.Schema({
     },
     startingTime: {
         type: Date,
-        required: true
+        default: null 
     },
     endingTime: {
         type: Date,
-        required: true
+        default: null 
+    },
+    testId: {
+        type: Number,
+        required: true,
+        unique: true, 
+        index: true
     },
     status: {
         type: String,
-        required: true,
-        enum: ['active', 'inactive'],
-        default: 'active'
+        enum: ["active", "inactive"],
+        default: "active"
     },
     mcqs: [
         {
+            _id: { type: mongoose.Schema.Types.ObjectId, auto: true },
             question: {
                 type: String,
                 required: true
@@ -62,7 +68,8 @@ const testSchema = new mongoose.Schema({
                 ],
                 status: {
                     type: String,
-                    enum: ['cheated', 'submitted']
+                    enum: ["cheated", "submitted"],
+                    default: "submitted"
                 }
             }
         ],
@@ -70,4 +77,4 @@ const testSchema = new mongoose.Schema({
     }
 });
 
-module.exports = mongoose.model('Test', testSchema);
+module.exports = mongoose.model("Test", testSchema);
